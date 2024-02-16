@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form class="form-group">
+    <h4>Generate Number for Particiation. <br>
+        Please note this id!</h4>
+    <div class="form-group final">
+      <label for="generatedNumber">Particiation Number:</label>
+      <input type="text" id="generatedNumber" name="generatedNumber" readonly>
+    </div>
+    <button type="button" onclick="generateRandomNumber()">Generate Number</button>
+    <br>
+    <br>
+    <h2><p class="slowly-visible">Thank you!!!</p></h2>
+  </form>
+  <script>
+    function generateRandomNumber() {
+  const randomNumber = Math.floor(100000 + Math.random() * 900000); // Generates a random 6-digit number
+  document.getElementById("generatedNumber").value = randomNumber;
+}
+  </script>
+</body>
+</html>
+
